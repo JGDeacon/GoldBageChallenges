@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Badges", "Badges\Badges.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadgesUnitTests", "BadgesUnitTests\BadgesUnitTests.csproj", "{9D108590-C25E-4D1B-ABB1-B1212ACBA9B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Outings", "Outings\Outings.csproj", "{F38561AA-46D2-4339-A9F4-2AE398FC6880}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyOutings", "Outings\CompanyOutings.csproj", "{F38561AA-46D2-4339-A9F4-2AE398FC6880}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeTools", "ChallengeTools\ChallengeTools.csproj", "{529E57D3-5E78-48CE-A22A-EB6E4293D92E}"
 EndProject

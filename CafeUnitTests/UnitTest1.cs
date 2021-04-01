@@ -9,7 +9,7 @@ namespace CafeUnitTests
     public class UnitTest1
     {
         private static MenuRepo _menuRepo = new MenuRepo();
-        private static IngredientRepo _ingredientRepo = new IngredientRepo();
+        //private static IngredientRepo _ingredientRepo = new IngredientRepo();
 
         [TestMethod]
         public void AddMenuItemTest()

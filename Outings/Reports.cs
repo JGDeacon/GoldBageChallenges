@@ -62,7 +62,7 @@ namespace Outings
                         results.Add(item);
                     }
                 }
-                else if (selection == "Per Person Cost")
+                else if (selection == "1")
                 {
                     if (item.CostPP >= startRange && item.CostPP <= endRange)
                     {

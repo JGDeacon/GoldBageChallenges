@@ -54,6 +54,7 @@ namespace ChallengeTools
             if (input.Length > 0)
             {
                 string cleanItem = char.ToUpper(input[0]) + input.Substring(1);
+                Console.ForegroundColor = ConsoleColor.Blue;
                 return cleanItem;
             }
 

@@ -9,7 +9,7 @@ namespace Cafe
     public class ProgramUI
     {
         MenuRepo _menuRepo = new MenuRepo();
-        IngredientRepo _ingredientRepo = new IngredientRepo();
+        //IngredientRepo _ingredientRepo = new IngredientRepo();
         public void MainMenu()
         {
             SeedItems();
@@ -265,6 +265,7 @@ namespace Cafe
             if (input.Length > 0)
             {
                 string cleanItem = char.ToUpper(input[0]) + input.Substring(1);
+                Console.ForegroundColor = ConsoleColor.Blue;
                 return cleanItem;
             }
             Console.ForegroundColor = ConsoleColor.Blue;
