@@ -68,7 +68,7 @@ namespace Badges
                         break;
                 }
             }
-            kmTools.AnyKey();
+            
         }
         private void AddBadge()
         {
@@ -83,6 +83,7 @@ namespace Badges
 
                 Console.WriteLine("Would you like to add an additional door to the badge?");
                 kmTools.CoolColors("1. Yes");
+                Console.WriteLine("Any key for No");
                 text = kmTools.SetInputColor();
                 int.TryParse(text, out doorCheck);
 
@@ -98,6 +99,7 @@ namespace Badges
             int selection;
             do
             {
+                Console.Clear();
                 kmTools.CompanyName();
                 Console.WriteLine("Please enter a numeric Badge ID you would like to update");
                 text = kmTools.SetInputColor();
@@ -136,6 +138,7 @@ namespace Badges
             int selection;
             do
             {
+                Console.Clear();
                 kmTools.CompanyName();
                 Console.WriteLine("Please enter a numeric Badge ID you would like to clear door access");
                 text = kmTools.SetInputColor();
@@ -158,7 +161,7 @@ namespace Badges
             {
                 Console.WriteLine($"ID: {item.ToString()} Doors: {badgeValuePairs[item].ToString()}");
             }
-            Console.ReadLine();
+            kmTools.AnyKey();
         }
         private void SearchBadgesBadge(string door)
         {
@@ -169,7 +172,7 @@ namespace Badges
             {
                 Console.WriteLine($"ID: {item}");
             }
-            Console.ReadLine();
+            kmTools.AnyKey();
         }
 
         private void SeedBadges()

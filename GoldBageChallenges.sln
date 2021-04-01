@@ -19,9 +19,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyOutings", "Outings\C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeTools", "ChallengeTools\ChallengeTools.csproj", "{529E57D3-5E78-48CE-A22A-EB6E4293D92E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutingsUnitTests", "OutingsUnitTests\OutingsUnitTests.csproj", "{44E39DD7-D196-49F8-A2FA-AE42A952830D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyOutingsUnitTests", "OutingsUnitTests\CompanyOutingsUnitTests.csproj", "{44E39DD7-D196-49F8-A2FA-AE42A952830D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barbecue", "Barbecue\Barbecue.csproj", "{DB257CCE-308B-42B4-AB9E-077B767164BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarbecueUnitTests", "BarbecueUnitTests\BarbecueUnitTests.csproj", "{B4894FE9-37BF-47AB-92F1-06D6FE76E97B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{DB257CCE-308B-42B4-AB9E-077B767164BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB257CCE-308B-42B4-AB9E-077B767164BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB257CCE-308B-42B4-AB9E-077B767164BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4894FE9-37BF-47AB-92F1-06D6FE76E97B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4894FE9-37BF-47AB-92F1-06D6FE76E97B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4894FE9-37BF-47AB-92F1-06D6FE76E97B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4894FE9-37BF-47AB-92F1-06D6FE76E97B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
