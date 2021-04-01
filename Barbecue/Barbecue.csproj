@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Orders.cs" />
+    <Compile Include="Party.cs" />
+    <Compile Include="PartyRepo.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProgramUI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +56,10 @@
     <ProjectReference Include="..\Cafe\Cafe.csproj">
       <Project>{b9efcf4a-7cbf-4ac0-8ac5-a9e4d6b21356}</Project>
       <Name>Cafe</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChallengeTools\ChallengeTools.csproj">
+      <Project>{529E57D3-5E78-48CE-A22A-EB6E4293D92E}</Project>
+      <Name>ChallengeTools</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

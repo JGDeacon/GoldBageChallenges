@@ -10,6 +10,8 @@ namespace Barbecue
     {
         static void Main(string[] args)
         {
+            ProgramUI ui = new ProgramUI();
+            ui.MainMenu();
         }
     }
 }
