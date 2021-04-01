@@ -53,10 +53,6 @@ namespace Cafe
             }
         }
 
-
-
-
-
         private void AddMenuItem()
         {
             decimal price;
@@ -97,13 +93,11 @@ namespace Cafe
                     cleanItem = char.ToUpper(str[0]) + str.Substring(1);
                     ingredients.Add(new Ingredient(cleanItem));
                 }
-
             }
             _menuRepo.AddMeal(mealName, description, price, ingredients);
             Console.WriteLine("The menu item has been added.");
             AnyKey();
         }
-
 
         private void DeleteMenuItem()
         {
@@ -190,20 +184,10 @@ namespace Cafe
                         Console.WriteLine("\n" + ingredientList);
                         ingredientList = "";
                     }
-
                     AnyKey();
                     break;
             }
-
-
         }
-
-
-
-
-
-
-
         //Helper Methods
         private int TryParseInt(string entry)
         {
@@ -271,10 +255,6 @@ namespace Cafe
             Console.ForegroundColor = ConsoleColor.Blue;
             return input;
         }
-
-
-
-
         public void SeedItems()
         {
             List<Ingredient> first = new List<Ingredient>();

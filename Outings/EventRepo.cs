@@ -17,7 +17,6 @@ namespace Outings
             _events.Add(newEvent);
             return (checkValue + 1 == _events.Count) ? true : false;
         }
-
         public List<Event> GetEvents()
         {
             return _events;

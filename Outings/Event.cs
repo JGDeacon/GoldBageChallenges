@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Outings
 {
-    public enum Events {  AmusementPark, Bowling, Concert,Golf }
+    public enum Events { AmusementPark, Bowling, Concert, Golf }
     public class Event
     {
         public Events EventType { get; set; }
@@ -14,13 +14,10 @@ namespace Outings
         public DateTime EventDate { get; set; }
         public decimal CostPP { get { return GetPPCost(); } }
         public decimal EventCost { get; set; }
-
-
         private decimal GetPPCost()
         {
             return EventCost / Attendance;
         }
-
         public Event()
         {
 
@@ -39,6 +36,5 @@ namespace Outings
             EventDate = eventDate;
             EventCost = eventCost;
         }
-
     }
 }

@@ -13,7 +13,5 @@ namespace Cafe
             ProgramUI ui = new ProgramUI();
             ui.MainMenu();
         }
-
-
     }
 }

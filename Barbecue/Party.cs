@@ -24,8 +24,6 @@ namespace Barbecue
             Name = name;
             MenuID = menuID;
         }
-
-
         private decimal MenuCost()
         {
             decimal runningTotal = 0m;

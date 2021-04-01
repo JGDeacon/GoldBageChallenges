@@ -73,7 +73,6 @@ namespace ChallengeTools
                 Console.ForegroundColor = ConsoleColor.Blue;
                 return cleanItem;
             }
-
             Console.ForegroundColor = ConsoleColor.Blue;
             return input;
         }

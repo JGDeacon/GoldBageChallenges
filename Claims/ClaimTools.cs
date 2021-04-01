@@ -52,8 +52,7 @@ namespace KomodoRepo
                 string cleanItem = char.ToUpper(input[0]) + input.Substring(1);
                 Console.ForegroundColor = ConsoleColor.Blue;
                 return cleanItem;
-            }
-            
+            }            
             Console.ForegroundColor = ConsoleColor.Blue;
             return input;
         }

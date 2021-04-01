@@ -10,8 +10,6 @@ namespace Cafe
     {
         public int IngredientID { get; set; }
         public string IngredientName { get; set; }
-        //public int MenuID { get; set; }
-
         public Ingredient()
         {
 

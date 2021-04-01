@@ -14,7 +14,7 @@ namespace Cafe
         {
             int[] maxID = new int[_menuItems.Count];
             int count = 0;
-            int id=0;
+            int id = 0;
 
             if (_menuItems.Count > 0)
             {
@@ -47,7 +47,6 @@ namespace Cafe
             }
             return null;
         }
-
         public List<Menu> GetAllMenuItems()
         {
             return _menuItems;
@@ -72,11 +71,7 @@ namespace Cafe
             {
                 _menuItems.Remove(menu);
             }
-            
-
             return (mealCount > _menuItems.Count) ? true : false;
         }
-
-
     }
 }

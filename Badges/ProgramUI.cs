@@ -68,7 +68,7 @@ namespace Badges
                         break;
                 }
             }
-            
+
         }
         private void AddBadge()
         {
@@ -184,8 +184,6 @@ namespace Badges
             _badgeRepo.AddBadge("Hallway, Garage, Outside, Windows");
             _badgeRepo.AddBadge("Hallway, Kitchen, Outside, Main");
         }
-
-
 
     }
 }

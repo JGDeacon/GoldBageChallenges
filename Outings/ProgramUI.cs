@@ -10,7 +10,6 @@ namespace Outings
 {
     public class ProgramUI
     {
-
         ToolBox toolBox = new ToolBox();
         EventRepo _eventRepo = new EventRepo();
         Reports reports = new Reports();
@@ -18,12 +17,9 @@ namespace Outings
         public void MainMenu()
         {
             SeedData();
-
             bool stillInLoop = true;
             while (stillInLoop)
             {
-
-
                 toolBox.CompanyName();
                 Console.WriteLine("Pick from the following options");
                 Console.WriteLine("(A)dd an Outing");
@@ -31,7 +27,6 @@ namespace Outings
                 Console.WriteLine("(V)iew Reports");
                 Console.WriteLine("e(X)it");
                 string selection = Console.ReadLine().ToUpper();
-
                 switch (selection)
                 {
                     case "A":
@@ -50,15 +45,10 @@ namespace Outings
                         Console.WriteLine("Please pick from A, L, V, or X");
                         break;
                 }
-
             }
-
-
         }
-
         private void AddOuting()
         {
-
             toolBox.CompanyName();
             bool questionLoop = true;
             string response;
@@ -70,8 +60,6 @@ namespace Outings
             {
                 Console.WriteLine("What type outing was held? (G)olf, (B)owling, (A)musement Park, or (C)oncert");
                 response = Console.ReadLine().ToUpper();
-
-
                 switch (response)
                 {
                     case "G":
@@ -95,7 +83,6 @@ namespace Outings
                         questionLoop = false;
                         break;
                 }
-
             } while (questionLoop == false);
             toolBox.CompanyName();
             questionLoop = false;
@@ -133,11 +120,9 @@ namespace Outings
                     Console.ReadKey();
                 }
             } while (questionLoop == false);
-
             _eventRepo.AddEvent(eventType, attendance, eventDate, eventCost);
             toolBox.CompanyName();
         }
-
         private void ListOutings(List<Event> events, bool showTotals)
         {
             string eventType;
@@ -157,14 +142,12 @@ namespace Outings
             }
             toolBox.AnyKey();
         }
-
         private void ReportMenu()
         {
             List<Event> workingEventList = new List<Event>();
             List<Event> sortedEventList = new List<Event>();
             int sortType = 0;
             bool ascending = true;
-
             string selectionText;
             bool validInput = false;
             bool stillInLoop = false;
@@ -345,7 +328,6 @@ namespace Outings
                         stillInLoop = true;
                         break;
                 }
-
             } while (stillInLoop);
 
             toolBox.CompanyName();
@@ -362,7 +344,6 @@ namespace Outings
                     "(T)otal Cost\n" +
                     "(P)er Person Cost\n");
                 selectionText = Console.ReadLine().ToUpper();
-
                 switch (selectionText)
                 {
                     case "A":
@@ -411,14 +392,11 @@ namespace Outings
                     Console.WriteLine("Please enter A or D");
                     stillInLoop = true;
                 }
-
             } while (stillInLoop);
             sortedEventList = reports.OrderEvents(workingEventList, sortType, ascending);
 
-            ListOutings(sortedEventList, true);
-            //toolBox.AnyKey();
+            ListOutings(sortedEventList, true);           
         }
-
         private void SeedData()
         {
             DateTime dateTime = DateTime.Parse("03/12/2021");

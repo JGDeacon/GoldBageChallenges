@@ -17,7 +17,6 @@ namespace Barbecue
         decimal hotdogCost = 3.99m;
         decimal icecreamCost = 2.99m;
         decimal popcornCost = .99m;
-
         public void MainMenu()
         {
             SeedParties();
@@ -28,7 +27,7 @@ namespace Barbecue
                 Console.Clear();
                 toolBox.CompanyName();
 
-                Console.WriteLine("Please select one of the options below\n"); //########### Add option to set prices...?###############
+                Console.WriteLine("Please select one of the options below\n");
                 toolBox.CoolColors("1. Add Party");
                 toolBox.CoolColors("2. View Parties");
                 toolBox.CoolColors("3. Set Prices");
@@ -53,20 +52,18 @@ namespace Barbecue
                         Console.WriteLine("Please enter a vaild selection (1-3)");
                         break;
                 }
-
             }
-
         }
         private void AddParty()
         {
             List<Menu> menuItems = new List<Menu>();
             string inputText;
             bool validEntry = false;
-            int hamburgers=0;
-            int veggieburgers=0;
-            int hotdogs=0;
-            int icecreams=0;
-            int popcorn=0;
+            int hamburgers = 0;
+            int veggieburgers = 0;
+            int hotdogs = 0;
+            int icecreams = 0;
+            int popcorn = 0;
             Console.Clear();
             toolBox.CompanyName();
             Console.WriteLine("I think it was P!nk who said lets get this party started!\n");
@@ -134,10 +131,9 @@ namespace Barbecue
                     RebuildParty(partyName, 4, hamburgers, veggieburgers, hotdogs, icecreams, popcorn);
                 }
             } while (validEntry == false);
-            
+
             menuItems = CreateMenu(hamburgers, veggieburgers, hotdogs, icecreams, popcorn);
             _partyRepo.AddParty(partyName, menuItems);
-            
 
             toolBox.AnyKey();
         }
@@ -185,7 +181,6 @@ namespace Barbecue
                 item.Price = popcornCost;
                 returnMenu.Add(item);
             }
-
             return returnMenu;
         }
 
@@ -294,7 +289,6 @@ namespace Barbecue
                         break;
                 }
             }
-            
         }
         private void ListParties()
         {
@@ -309,7 +303,6 @@ namespace Barbecue
 
             foreach (Party item in _partyRepo.GetParties())
             {
-
                 hamburgers = 0;
                 veggieburgers = 0;
                 hotdogs = 0;
@@ -354,16 +347,12 @@ namespace Barbecue
                             break;
                     }
                 }
-
-
-
                 Console.WriteLine("{0,-45}{1,-45}", "Burger Booth Tickets: " + burgerBooth.ToString(), "Treat Booth Tickets: " + treatBooth.ToString());
                 Console.WriteLine("{0,-45}{1,-45}", "Hamburger Tickets: " + hamburgers, "Icecream Tickets: " + icecreams);
                 Console.WriteLine("{0,-45}{1,-45}", "Veggie Burger Tickets: " + veggieburgers, "Popcorn Tickets: " + popcorn);
                 Console.WriteLine("{0,-45}", "Hotdog Tickets: " + hotdogs.ToString());
                 colorCount++;
             }
-
             toolBox.AnyKey();
         }
         private void RebuildParty(string name, int step, int hamburgers, int veggieburgers, int hotdogs, int icecreams, int popcorn)
@@ -374,26 +363,21 @@ namespace Barbecue
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(name);
             Console.ForegroundColor = ConsoleColor.Blue;
-
-
             switch (step)
             {
                 case 0:
                     break;
                 case 1:
-                    
                     Console.Write("Number of Hamburgers: ");
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine(hamburgers);
                     Console.ForegroundColor = ConsoleColor.Blue;
                     break;
                 case 2:
-
                     Console.Write("Number of Hamburgers: ");
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine(hamburgers);
                     Console.ForegroundColor = ConsoleColor.Blue;
-
                     Console.Write("Number of Veggie Burgers: ");
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine(veggieburgers);
@@ -404,12 +388,10 @@ namespace Barbecue
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine(hamburgers);
                     Console.ForegroundColor = ConsoleColor.Blue;
-
                     Console.Write("Number of Veggie Burgers: ");
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine(veggieburgers);
                     Console.ForegroundColor = ConsoleColor.Blue;
-
                     Console.Write("Number of HotDogs: ");
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine(hotdogs);
@@ -420,17 +402,14 @@ namespace Barbecue
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine(hamburgers);
                     Console.ForegroundColor = ConsoleColor.Blue;
-
                     Console.Write("Number of Veggie Burgers: ");
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine(veggieburgers);
                     Console.ForegroundColor = ConsoleColor.Blue;
-
                     Console.Write("Number of Hotdogs: ");
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine(hotdogs);
                     Console.ForegroundColor = ConsoleColor.Blue;
-
                     Console.Write("Number of Ice Creams: ");
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine(icecreams);
@@ -441,28 +420,23 @@ namespace Barbecue
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine(hamburgers);
                     Console.ForegroundColor = ConsoleColor.Blue;
-
                     Console.Write("Number of Veggie Burgers: ");
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine(veggieburgers);
                     Console.ForegroundColor = ConsoleColor.Blue;
-
                     Console.Write("Number of Hotdogs: ");
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine(hotdogs);
                     Console.ForegroundColor = ConsoleColor.Blue;
-
                     Console.Write("Number of Ice Creams: ");
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine(icecreams);
                     Console.ForegroundColor = ConsoleColor.Blue;
-
                     Console.Write("Number of Popcorn: ");
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine(popcorn);
                     Console.ForegroundColor = ConsoleColor.Blue;
                     break;
-
                 default:
                     break;
             }
@@ -481,7 +455,6 @@ namespace Barbecue
             List<Menu> menu4 = new List<Menu>();
             menu4 = CreateMenu(1, 0, 0, 1, 1);
             _partyRepo.AddParty("Some 0s", menu4);
-
         }
     }
 }

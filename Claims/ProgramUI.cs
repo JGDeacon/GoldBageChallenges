@@ -12,7 +12,7 @@ namespace Claims
     {
         InsClaimRepo _insClaimRepo = new InsClaimRepo();
         KomodoTools kmTools = new KomodoTools();
-        
+
         public void MainMenu()
         {
             SeedClaims();
@@ -95,10 +95,6 @@ namespace Claims
                         kmTools.AnyKey();
                         break;
                 }
-
-
-
-
             }
         }
         private void SeeAllClaims()
@@ -108,7 +104,7 @@ namespace Claims
             foreach (InsClaim item in _insClaimRepo.GetAllClaims())
             {
                 Console.WriteLine("{0,-10} {1,-7} {2,-50} {3,-12} {4, -17} {5,-22}"
-                    , item.ID,item.Claim,item.Description,item.ClaimAmount.ToString("C2"),item.DateOfIncident.ToShortDateString(),item.DateOfClaim.ToShortDateString());
+                    , item.ID, item.Claim, item.Description, item.ClaimAmount.ToString("C2"), item.DateOfIncident.ToShortDateString(), item.DateOfClaim.ToShortDateString());
             }
             kmTools.AnyKey();
         }
@@ -125,7 +121,7 @@ namespace Claims
         }
         private void ProcessClaim()
         {
-            
+
             InsClaim nextClaim = _insClaimRepo.GetNextClaim();
             DisplayClaim(nextClaim);
             Console.WriteLine("Is this the correct claim?");
@@ -142,7 +138,7 @@ namespace Claims
                     Console.WriteLine("Please enter a 1 or 2");
                 }
             } while (validEntry == false);
-            if (selection ==2)
+            if (selection == 2)
             {
                 MainMenu();
             }
@@ -164,8 +160,7 @@ namespace Claims
             switch (selection)
             {
                 case 1:
-                   
-                    selection =0;
+                    selection = 0;
                     validEntry = false;
                     InsClaim updateClaim = CreateClaim();
                     do
@@ -200,7 +195,6 @@ namespace Claims
                 default:
                     break;
             }
-
         }
         private InsClaim CreateClaim()
         {
@@ -281,14 +275,11 @@ namespace Claims
             text = "";
             selection = 0;
             return newClaim;
-            
-
         }
-
         private void DisplayClaim(InsClaim claim)
         {
             Console.WriteLine($"Claim ID: {claim.ID}\n" +
-                $"Claim Type: {claim.Claim}\n"  +
+                $"Claim Type: {claim.Claim}\n" +
                 $"Description: {claim.Description}\n" +
                 $"Claim Amount: {claim.ClaimAmount}\n" +
                 $"Date Of Incident: {claim.DateOfIncident.ToShortDateString()}\n" +

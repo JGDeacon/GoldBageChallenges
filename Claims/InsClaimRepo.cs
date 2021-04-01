@@ -9,7 +9,6 @@ namespace Claims
     public class InsClaimRepo
     {
         protected readonly List<InsClaim> _insClaims = new List<InsClaim>();
-
         public bool AddClaim(ClaimType claim, string description, decimal claimAmount, DateTime dateOfIncident, DateTime dateOfClaim)
         {
             int id = _insClaims.Count+1;
@@ -47,9 +46,6 @@ namespace Claims
                 }
             }
             return null;
-
-          
-
         }
         public List<InsClaim> GetAllClaims()
         {
