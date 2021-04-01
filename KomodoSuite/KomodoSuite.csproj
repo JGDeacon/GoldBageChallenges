@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0009613C-73B8-4278-8305-68C02A9BC4AD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>KomodoSuite</RootNamespace>
+    <AssemblyName>KomodoSuite</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgramUI.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Badges\Badges.csproj">
+      <Project>{7CD9E07A-7C95-4BE9-A3CC-5F044AE4CA45}</Project>
+      <Name>Badges</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Barbecue\Barbecue.csproj">
+      <Project>{db257cce-308b-42b4-ab9e-077b767164be}</Project>
+      <Name>Barbecue</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cafe\Cafe.csproj">
+      <Project>{b9efcf4a-7cbf-4ac0-8ac5-a9e4d6b21356}</Project>
+      <Name>Cafe</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChallengeTools\ChallengeTools.csproj">
+      <Project>{529E57D3-5E78-48CE-A22A-EB6E4293D92E}</Project>
+      <Name>ChallengeTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Claims\Claims.csproj">
+      <Project>{c548bba8-81c4-4661-8d11-43ec6e35531a}</Project>
+      <Name>Claims</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Outings\CompanyOutings.csproj">
+      <Project>{f38561aa-46d2-4339-a9f4-2ae398fc6880}</Project>
+      <Name>CompanyOutings</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Outings
+namespace KomodoSuite
 {
-    public class Program
+    class Program
     {
         static void Main(string[] args)
         {

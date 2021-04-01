@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Badges
 {
-    class ProgramUI
+    public class ProgramUI
     {
         BadgeRepo _badgeRepo = new BadgeRepo();
         KomodoTools kmTools = new KomodoTools();
