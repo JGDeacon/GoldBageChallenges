@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyOutings", "Outings\C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeTools", "ChallengeTools\ChallengeTools.csproj", "{529E57D3-5E78-48CE-A22A-EB6E4293D92E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutingsUnitTests", "OutingsUnitTests\OutingsUnitTests.csproj", "{44E39DD7-D196-49F8-A2FA-AE42A952830D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyOutingsUnitTests", "OutingsUnitTests\CompanyOutingsUnitTests.csproj", "{44E39DD7-D196-49F8-A2FA-AE42A952830D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barbecue", "Barbecue\Barbecue.csproj", "{DB257CCE-308B-42B4-AB9E-077B767164BE}"
 EndProject

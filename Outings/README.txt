@@ -27,6 +27,6 @@ ToolBox.cs - Helper class in the ChallengeTools project with QOL methods.
 
 
 
-Unit Tests reside in the ClaimsUnitTests Solution.
+Unit Tests reside in the CompanyOutingsUnitTests Solution.
 
 Note: I approached the UI interaction much differently just to try a different approach. I think that the numeric menus are the way to go.
