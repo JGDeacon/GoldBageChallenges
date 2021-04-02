@@ -8,15 +8,14 @@ namespace Badges
 {
     public class BadgeRepo
     {
-        //protected readonly Badge _badge = new Badge();
         protected readonly Dictionary<int, string> badgeList = new Dictionary<int, string>();
-       
+
         public bool AddBadge(string doors)
         {
 
             Badge newBadge = new Badge();
-            newBadge.ID = badgeList.Count+1;
-            newBadge.Door =doors;
+            newBadge.ID = badgeList.Count + 1;
+            newBadge.Door = doors;
 
             badgeList.Add(newBadge.ID, newBadge.Door);
 
@@ -24,15 +23,17 @@ namespace Badges
         }
         public bool EditBadge(int id, string doors)
         {
-            badgeList[id] = doors;
-            if (badgeList[id] == doors)
+            if (id <= badgeList.Count)
             {
-                return true;
+                badgeList[id] = doors;
+                if (badgeList[id] == doors)
+                {
+                    return true;
+                }
+                
             }
-            else
-            {
-                return false;
-            }
+            return false;
+
         }
         public Dictionary<int, string> ListAllBadges()
         {
@@ -47,7 +48,8 @@ namespace Badges
                 {
                     badgeIDs.Add(item.Key);
                 }
-            }           return badgeIDs;
+            }
+            return badgeIDs;
         }
         public bool ClearBadge(int id)
         {

@@ -14,8 +14,7 @@ namespace Badges
         public void MainMenu()
         {
             SeedBadges();
-            string text;
-            //bool validEntry = false;
+            string text;            
             int selection;
 
             bool stillInLoop = true;
@@ -89,8 +88,25 @@ namespace Badges
 
 
             } while (doorCheck == 1);
-            doors = doors.TrimEnd(',', ' ');
-            _badgeRepo.AddBadge(doors);
+
+            string[] items = doors.Split(','); //string cleanup
+            string cleanItem = "";
+            string str;
+            string doorList = "";
+            foreach (string item in items)
+
+            {
+                str = item.TrimEnd(',', ' ');
+                str = str.TrimStart(' ');
+                if (str != "")
+                {
+                    cleanItem = char.ToUpper(str[0]) + str.Substring(1);
+                    doorList = doorList + ", " + cleanItem;
+                }
+            }
+            doorList = doorList.TrimStart(',');
+            doorList = doorList.TrimStart(' ');
+            _badgeRepo.AddBadge(doorList);
         }
         private void UpdateBadge()
         {
@@ -101,12 +117,25 @@ namespace Badges
             {
                 Console.Clear();
                 kmTools.CompanyName();
-                Console.WriteLine("Please enter a numeric Badge ID you would like to update");
+                Dictionary<int, string> badgeValuePairs = _badgeRepo.ListAllBadges();
+                badgeValuePairs = _badgeRepo.ListAllBadges();
+                Console.WriteLine("Current Badges \n");
+                foreach (int item in badgeValuePairs.Keys)
+                {
+                    Console.WriteLine($"ID: {item.ToString()} Doors: {badgeValuePairs[item].ToString()}");
+                }
+                Console.WriteLine("\nPlease enter a numeric Badge ID you would like to update");
                 text = kmTools.SetInputColor();
                 validEntry = int.TryParse(text, out selection);
                 if (validEntry == false)
                 {
                     Console.WriteLine("Badge ID's can only contain numbers. Please try again.");
+                    kmTools.AnyKey();
+                }
+                if (selection > _badgeRepo.ListAllBadges().Count)
+                {
+                    Console.WriteLine("That Badge number doesn't exist. Please try again.");
+                    validEntry = false;
                     kmTools.AnyKey();
                 }
             } while (validEntry == false);
@@ -127,8 +156,23 @@ namespace Badges
 
 
             } while (doorCheck == 1);
-            doors = doors.TrimEnd(',', ' ');
-            _badgeRepo.EditBadge(selection, doors);
+            string[] items = doors.Split(','); //string cleanup
+            string cleanItem = "";
+            string str;
+            string doorList = "";
+            foreach (string item in items)
+            {
+                str = item.TrimEnd(',', ' ');
+                str = str.TrimStart(' ');
+                if (str != "")
+                {
+                    cleanItem = char.ToUpper(str[0]) + str.Substring(1);
+                    doorList = doorList + ", " + cleanItem;
+                }
+            }
+            doorList = doorList.TrimStart(',');
+            doorList = doorList.TrimStart(' ');            
+            _badgeRepo.EditBadge(selection, doorList);
             kmTools.AnyKey();
         }
         private void ClearBadge()

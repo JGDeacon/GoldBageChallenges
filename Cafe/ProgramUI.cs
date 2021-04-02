@@ -68,7 +68,7 @@ namespace Cafe
             string description = SetInputColor();
             do
             {
-                Console.WriteLine("What is the cost of the item?");// This should be in a loop
+                Console.WriteLine("What is the cost of the item?");
                 priceEntry = SetInputColor();
                 isDecimal = decimal.TryParse(priceEntry, out price);
                 if (isDecimal == false)
